@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_sort"
+    android:background="@color/background_activity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="品牌"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/text_hit"
+        android:textSize="@dimen/pt10" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="价格"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/text_hit"
+        android:textSize="@dimen/pt10" />
+    
+    <ListView
+        android:id="@+id/listView_price"
+        android:listSelector="@android:color/transparent"
+        android:divider="@drawable/linex"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/text_tips"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="重置"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt17" />
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/button_background"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="完成"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt17" />
+    </LinearLayout>
+</LinearLayout>

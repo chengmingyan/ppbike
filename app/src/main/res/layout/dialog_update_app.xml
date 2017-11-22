@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:showDividers="middle"
+	android:divider="@drawable/linex"
+	android:orientation="vertical"
+	android:background="@color/background_activity">
+    
+    <TextView 
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:gravity="center_vertical"
+		android:paddingLeft="20dp"
+		android:text="有新版本"
+        android:textColor="#ff58b6ff"
+        android:textSize="16sp"
+        android:background="@color/white"
+        />
+    
+        <ScrollView
+	        android:layout_width="match_parent"
+	        android:layout_height="100dip"
+			android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+	        android:paddingBottom="5dip"
+			android:paddingTop="5dp"
+	        android:fadingEdge="vertical"
+	        android:fadingEdgeLength="20dip"
+	        android:requiresFadingEdge="vertical"
+			android:background="@color/white"
+	        >
+	        
+	        <TextView 
+	            android:id="@+id/tv_content"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#ff333333"
+	            android:textSize="13sp"
+				android:paddingLeft="18dip"
+				android:paddingRight="18dip"
+				android:layout_marginBottom="10dip"
+				android:minHeight="80dp"
+				android:maxLines="20"
+	            />
+	    </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/lin_other_btns"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+			android:showDividers="middle"
+			android:background="@color/white"
+			android:divider="@drawable/liney"
+            android:gravity="center"
+            android:orientation="horizontal">
+            
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#ffabbed9"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:text="稍后更新"
+				android:background="@android:color/transparent"
+                />
+
+			<Button
+				android:id="@+id/btn_update"
+				android:layout_width="0dip"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:textColor="#ff58b6ff"
+				android:textSize="13sp"
+				android:gravity="center"
+				tools:text="立即升级"
+				android:background="@android:color/transparent"
+				/>
+
+    </LinearLayout>
+</LinearLayout>

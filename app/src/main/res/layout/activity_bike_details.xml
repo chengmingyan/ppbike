@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activity"
+    android:orientation="vertical">
+
+    <include layout="@layout/inclule_title" />
+
+    <com.ppbike.view.StretchScrollView
+        android:id="@+id/layout"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/image"
+                android:src="@color/drawable_circle"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="320dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_layout"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="2"
+                        android:text="伏安特12速山地车伏安特12速山地车伏安特12速山地车伏安特12速山地车伏安特12速山地车伏安特12速山地车伏安特12速山地车伏安特12速山地车"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/pt15" />
+
+                    <com.ppbike.view.IconView
+                        android:id="@+id/icon_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="30dp"
+                        android:text="&#xe612;"
+                        android:textColor="@color/button_background"
+                        android:textSize="@dimen/pt23" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_pPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:text="租金：￥30.00/天"
+                    android:textColor="@color/text_register"
+                    android:textSize="@dimen/pt12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_deposit"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="压金：￥20.00"
+                        android:textColor="@color/text_hit"
+                        android:textSize="@dimen/pt12" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="库存：20"
+                        android:textColor="@color/text_tips"
+                        android:textSize="@dimen/pt12" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="详情"
+                android:textColor="@color/text_hit"
+                android:textSize="@dimen/pt12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/background_layout"
+                android:layout_marginTop="2dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="订单编号：1231323"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+
+                <TextView
+                    android:id="@+id/tv_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="支付交易号：1231323"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15"/>
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="创建时间：2016-06-01 10:00"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+
+                <TextView
+                    android:id="@+id/tv_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="支付时间：2016-06-01 10:10"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+
+                <TextView
+                    android:id="@+id/tv_degree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="支付时间：2016-06-01 10:10"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+
+                <TextView
+                    android:id="@+id/tv_nprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="支付时间：2016-06-01 10:10"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:background="@color/background_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt12"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="取车地址：北京朝阳区双井新福小区4号308" />
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:divider="@drawable/liney"
+                android:showDividers="middle"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_location"
+                    android:onClick="onClick"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.ppbike.view.IconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="&#xe60a;"
+                        android:textColor="@color/button_background"
+                        android:textSize="@dimen/pt17" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="路线指引" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_link"
+                    android:onClick="onClick"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.ppbike.view.IconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="&#xe60f;"
+                        android:textColor="@color/button_background"
+                        android:textSize="@dimen/pt17" />
+
+                    <TextView
+                        android:id="@+id/tv_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="联系车主" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_evaluation"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp"
+                android:divider="@drawable/linex"
+                android:showDividers="middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:background="@color/background_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <RatingBar
+                    android:id="@+id/ratingBar_total"
+                    style="@style/RatingBar"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_evaluation"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt12"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_evaluationCount"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt12"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center_vertical|right"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:background="@color/background_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_hit"
+                android:textSize="@dimen/pt12"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="详情" />
+
+                <com.ppbike.view.StillListView
+                    android:id="@+id/listView"
+                    android:listSelector="@android:color/transparent"
+                    android:divider="@drawable/linex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.ppbike.view.StretchScrollView>
+
+    <Button
+        android:id="@+id/btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_background"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:text="立即下订单"
+        android:textColor="@color/text_menu"
+        android:textSize="@dimen/pt15" />
+
+    <com.ppbike.view.LoadView
+        android:id="@+id/loadView"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

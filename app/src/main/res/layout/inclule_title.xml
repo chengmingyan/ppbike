@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_title">
+
+    <com.ppbike.view.IconView
+        android:id="@+id/icon_back"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:onClick="onClick"
+        android:layout_centerVertical="true"
+        android:text="&#xe603;"
+        android:gravity="center"
+        android:textColor="@color/icon_back"
+        android:textSize="@dimen/pt17"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:textColor="@color/text_menu"
+        android:textSize="@dimen/pt17"
+        android:layout_centerInParent="true"
+        tools:text="标题"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

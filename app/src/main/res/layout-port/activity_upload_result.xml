@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activity"
+    android:orientation="vertical">
+
+    <include layout="@layout/inclule_title" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/text_tips"
+            android:gravity="center"
+            android:text="上传成功，等待审核"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt15" />
+
+        <include layout="@layout/inclule_rent_orderlist" />
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_background"
+            android:onClick="onClick"
+            android:text="继续摆摊"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt17" />
+
+        <Button
+            android:id="@+id/btn_booth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_background"
+            android:onClick="onClick"
+            android:text="查看我的地摊"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt17" />
+
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_background"
+            android:onClick="onClick"
+            android:text="返回首页"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt17" />
+    </LinearLayout>
+
+    <com.ppbike.view.LoadView
+        android:id="@+id/loadView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center" />
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_index_xhdpi"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_title">
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:text="&#xe60c;"
+            android:textColor="@color/icon_back"
+            android:textSize="@dimen/pt17" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="租车"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt17" />
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="&#xe60d;"
+            android:textColor="@color/icon_back"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_logo_white_xhdpi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp">
+
+        <Button
+            android:id="@+id/btn_rent"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/title_height"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:text="我要出租"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt17" />
+
+        <Button
+            android:id="@+id/btn_rental"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/title_height"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:text="我要租车"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt17" />
+    </LinearLayout>
+
+</LinearLayout>

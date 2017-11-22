@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:background="@drawable/bg_title_background_sel"
+    android:divider="@drawable/liney"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.ppbike.view.IconView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="—"
+            android:textColor="@color/text_version"
+            android:textSize="@dimen/pt17" />
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_reduction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="—"
+            android:textColor="@color/button_background"
+            android:textSize="@dimen/pt17" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/text_menu"
+        android:textSize="@dimen/pt15" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.ppbike.view.IconView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe601;"
+            android:textColor="@color/text_version"
+            android:textSize="@dimen/pt17" />
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="&#xe601;"
+            android:textColor="@color/button_background"
+            android:textSize="@dimen/pt17" />
+    </FrameLayout>
+</LinearLayout>

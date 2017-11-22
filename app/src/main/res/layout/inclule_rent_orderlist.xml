@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_layout"
+    android:divider="@drawable/linex"
+    android:showDividers="middle"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/image"
+            android:background="@color/icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_bikeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:lines="2"
+                android:lineSpacingExtra="3dp"
+                android:text="捷安特12速山地车捷安特捷安特12速山地车捷安特捷安特12速山地车捷安特"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt15" />
+
+            <TextView
+                android:id="@+id/tv_bikeInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginTop="3dp"
+                android:lineSpacingExtra="3dp"
+                android:text="12速、高碳钢、黄色、山地车、12速"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/text_version"
+                android:textSize="@dimen/pt12" />
+
+            <TextView
+                android:id="@+id/tv_bikeCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="3dp"
+                android:text="12速"
+                android:textColor="@color/text_tips"
+                android:textSize="@dimen/pt12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:divider="@drawable/liney"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_deposit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="押金：￥20.00"
+            android:textColor="@color/text_hit"
+            android:textSize="@dimen/pt15" />
+
+        <TextView
+            android:id="@+id/tv_pPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text="租金：￥20.00/天"
+            android:textColor="@color/text_register"
+            android:textSize="@dimen/pt15" />
+    </LinearLayout>
+
+</LinearLayout>

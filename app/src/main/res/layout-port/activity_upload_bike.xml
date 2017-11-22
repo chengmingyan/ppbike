@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_activity"
+    android:orientation="vertical">
+
+    <include layout="@layout/inclule_title" />
+
+    <com.ppbike.view.StretchScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layou_addPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                android:background="@color/drawable_circle"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:orientation="vertical"
+                >
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/icon_title"
+                    android:text="&#xe601;"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="添加单车图片"
+                    android:textColor="@color/text_add"
+                    android:textSize="@dimen/pt15" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="3dp"
+                android:text="主要信息"
+                android:textColor="@color/text_hit"
+                android:textSize="@dimen/pt12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="单车名称"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <com.andreabaccega.widget.FormEditText
+                    android:inputType="text"
+                    app:emptyErrorString="名称不能为空"
+                    app:testErrorString="请输入有效的名称"
+                    android:id="@+id/edit_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请输入属性名称"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="单车原价"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <com.andreabaccega.widget.FormEditText
+                    android:inputType="number"
+                    app:emptyErrorString="发票价格不能为空"
+                    app:testErrorString="请输入有效的发票价格"
+                    android:id="@+id/edit_nprice"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请输入单车的发票价格"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="单车租金"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <com.andreabaccega.widget.FormEditText
+                    android:inputType="number"
+                    app:emptyErrorString="租金不能为空"
+                    app:testErrorString="请输入有效的租金"
+                    android:id="@+id/edit_pprice"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请输入单车的租金"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="单车押金"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <com.andreabaccega.widget.FormEditText
+                    android:inputType="number"
+                    app:emptyErrorString="押金不能为空"
+                    app:testErrorString="请输入有效的押金"
+                    android:id="@+id/edit_deposit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请输入单车的押金"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="单车数量"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <com.andreabaccega.widget.FormEditText
+                    android:inputType="number"
+                    app:emptyErrorString="单车的数量不能为空"
+                    app:testErrorString="请输入有效的单车的数量"
+                    android:id="@+id/edit_count"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请输入单车的数量"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_pname"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="单车地址"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+
+                <TextView
+                    android:id="@+id/tv_pname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="2"
+                    android:text="定位中"
+                    android:textColor="@color/text_hit"
+                    android:textSize="@dimen/pt12" />
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="&#xe604;"
+                    android:textColor="@color/text_hit"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="3dp"
+                android:text="配置详情"
+                android:textColor="@color/text_hit"
+                android:textSize="@dimen/pt12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="颜色"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <com.andreabaccega.widget.FormEditText
+                    android:inputType="textPersonName"
+                    app:emptyErrorString="单车的颜色不能为空"
+                    app:testErrorString="请输入有效的颜色"
+                    android:id="@+id/edit_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请输入单车的颜色"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_speed"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="速别"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <TextView
+                    android:id="@+id/edit_speed"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请点击选择"
+                    />
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="&#xe602;"
+                    android:textColor="@color/text_hit"
+                    android:textSize="@dimen/pt17" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="品牌"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <com.andreabaccega.widget.FormEditText
+                    android:inputType="textPersonName"
+                    app:emptyErrorString="单车的品牌不能为空"
+                    app:testErrorString="请输入有效的品牌"
+                    android:id="@+id/edit_brand"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请输入单车的品牌"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_degree"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_layout"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="新旧程度"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt17" />
+
+                <TextView
+                    android:id="@+id/edit_degree"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/text_menu"
+                    android:textColorHint="@color/text_hit"
+                    android:textSize="@dimen/pt15"
+                    android:hint="请点击选择"
+                    />
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="&#xe602;"
+                    android:textColor="@color/text_hit"
+                    android:textSize="@dimen/pt17" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_button_background_selector"
+                android:onClick="onClick"
+                android:text="提交"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt17" />
+        </LinearLayout>
+    </com.ppbike.view.StretchScrollView>
+</LinearLayout>

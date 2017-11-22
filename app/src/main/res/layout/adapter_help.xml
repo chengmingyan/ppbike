@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background_layout"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_tips"
+        android:textSize="@dimen/pt17"
+        android:text="1、怎么租车？"
+        />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_hit"
+        android:textSize="@dimen/pt17"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发就……"
+        />
+</LinearLayout>

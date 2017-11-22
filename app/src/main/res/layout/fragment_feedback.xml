@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_title">
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:text="&#xe60c;"
+            android:textColor="@color/icon_title"
+            android:textSize="@dimen/pt17" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt17"
+             />
+
+    </RelativeLayout>
+
+    <com.andreabaccega.widget.FormEditText
+        android:id="@+id/edit_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_layout"
+        android:gravity="left"
+        android:hint="感谢你的宝贵意见!"
+        android:imeOptions="actionDone"
+        android:maxLength="300"
+        android:minLines="8"
+        android:padding="5dp"
+        android:textColor="@color/text_menu"
+        android:textColorHint="@color/text_hit"
+        android:textSize="@dimen/pt15"
+        app:emptyErrorString="请留下您的建议"
+        app:testErrorString="输入有误" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="right|center_vertical"
+        android:paddingRight="10dp"
+        android:text="0/300"
+        android:textColor="@color/text_hit"
+        android:textSize="@dimen/pt10" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/btn_background"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="提交"
+        android:textColor="@color/text_menu"
+        android:textSize="@dimen/pt17" />
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activity"
+    android:orientation="vertical"
+    >
+
+    <include
+        layout="@layout/inclule_title"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2015-04-05 05:34"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/text_version"
+        android:textSize="@dimen/pt12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/background_layout"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="["
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt15" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统消息"
+                android:textColor="#c14a00"
+                android:textSize="@dimen/pt15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="]"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt15" />
+
+            <TextView
+                android:id="@+id/tv_messageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拉开大书法家"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:minLines="2"
+            android:text="爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发就爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发就."
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt15" />
+    </LinearLayout>
+</LinearLayout>

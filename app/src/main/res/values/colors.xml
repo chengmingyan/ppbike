@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color><!-- rgba(0, 0, 0, 1) -->
+    <color name="background_activity">#2c2c2e</color><!-- rgba(44, 44, 46, 1) -->
+    <color name="background_layout">#353537</color><!-- rgba(53, 53, 55, 1) -->
+    <color name="background_title">#3E3E42</color><!-- rgba(62, 62, 66, 1) -->
+    <color name="button_background">#40B5C1</color><!-- rgba(64, 181, 193, 1) -->
+    <color name="text_add">#5C5C5C</color><!-- rgba(92, 92, 92, 1) -->
+    <color name="icon">#696969</color><!-- rgba(105, 105, 105, 1) -->
+    <color name="text_version">#696969</color><!-- rgba(105, 105, 105, 1) -->
+    <color name="icon_title">#ABABAB</color><!-- rgba(171, 171, 171, 1) -->
+    <color name="text_hit">#B1B1B1</color><!-- rgba(177, 177, 177, 1) -->
+    <color name="drawable_circle">#D8D8D8</color><!-- rgba(216, 216, 216, 1) -->
+    <color name="text_menu">#E6E6E6</color><!-- rgba(230, 230, 230, 1) -->
+    <color name="icon_menu">@color/text_menu</color><!-- rgba(230, 230, 230, 1) -->
+    <color name="edit_fills">#f1f1f1</color><!-- rgba(241, 241, 241, 1) -->
+    <color name="text_tips">#F27258</color><!-- rgba(242, 114, 88, 1) -->
+    <color name="text_register">#F3C21A</color><!-- rgba(243, 194, 26, 1) -->
+    <color name="white">#ffffff</color><!-- rgba(255, 255, 255, 1) -->
+
+    <color name="button_background_sel">#CC40B5C1</color>
+    <color name="icon_title_sel">#CCABABAB</color>
+</resources>

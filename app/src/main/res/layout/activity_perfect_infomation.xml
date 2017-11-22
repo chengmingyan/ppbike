@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_activity">
+
+    <include
+        layout="@layout/inclule_title"/>
+
+    <include
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/inclule_user_infomation"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_tips"
+        android:textSize="@dimen/pt12"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="15dp"
+        android:text="提示：为了保证你的交易安全，请填写真实的信息。"
+        android:id="@+id/tv_tips" />
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="提交"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_background"
+        android:onClick="onClick"
+        android:id="@+id/btn_submit"
+        android:textSize="@dimen/pt17"
+        android:textColor="@color/text_menu"
+        android:gravity="center" />
+
+
+</LinearLayout>

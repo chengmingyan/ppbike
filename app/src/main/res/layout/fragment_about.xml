@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_activity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/background_title">
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_menu"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:layout_centerVertical="true"
+            android:text="&#xe60c;"
+            android:gravity="center"
+            android:textColor="@color/icon_title"
+            android:textSize="@dimen/pt17"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pt17"
+            android:layout_centerInParent="true"
+            android:text="关于我们"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <com.ppbike.view.CircleImageView
+        android:id="@+id/image_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_login_logo"
+        android:src="@mipmap/ic_logo_colorful_xhdpi"
+        app:border_color="#0fff"
+        app:border_width="0dp"
+        android:contentDescription="@null"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="PPBIKE"
+        android:textColor="@color/text_tips"
+        android:textSize="@dimen/T8" />
+
+    <TextView
+        android:id="@+id/tv_versionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="版本：v1.0.0"
+        android:textColor="@color/text_version"
+        android:textSize="@dimen/pt10" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:text="爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发爱丽丝的积分打算开飞机水电费落实到开发拉的是减肥落实到开发。"
+        android:textColor="@color/text_menu"
+        android:textSize="@dimen/pt15" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="copyright©2016 ppbike.com"
+        android:textColor="@color/text_version"
+        android:textSize="@dimen/pt10" />
+</LinearLayout>

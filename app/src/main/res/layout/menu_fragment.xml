@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_user"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/background_title"
+        android:gravity="center_vertical"
+        android:onClick="onClick"
+        android:orientation="horizontal">
+
+        <com.ppbike.view.CircleImageView
+            android:id="@+id/image_user"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_login_logo"
+            android:contentDescription="@null"
+            app:border_color="#0fff"
+            app:border_width="0dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nikeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="昵称"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt15" />
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="LV:2"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/pt10" />
+        </LinearLayout>
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_user_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="&#xe604;"
+            android:textColor="@color/icon_back"
+            android:textSize="@dimen/pt17" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe609;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="首页"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_perfectInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe61c;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="完善实名信息"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_rentBike"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe610;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="我的租车订单"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bikeRent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe600;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="我的出租订单"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_booth"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe614;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="我的地摊"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_repair"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe611;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="便民修车铺"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_help"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe608;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="帮助中心"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe606;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="用户反馈"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_evaluation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe617;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="给我打分"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_about"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_height"
+                android:layout_marginTop="2dp"
+                android:background="@color/background_title"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <com.ppbike.view.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="&#xe60b;"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/T8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="关于我们"
+                    android:textColor="@color/text_menu"
+                    android:textSize="@dimen/pt15" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/ic_logo_gray_xhdpi"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_menu"
+        android:textSize="@dimen/pt15" />
+
+    <TextView
+        android:id="@+id/tv_versionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="版本：v 1.0.0"
+        android:textColor="@color/text_version"
+        android:textSize="@dimen/pt12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="copyright©2016 ppbik.com"
+        android:textColor="@color/text_version"
+        android:textSize="@dimen/pt10" />
+</LinearLayout>

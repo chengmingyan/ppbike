@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 经过测试sp与px换算公式为sp≈px/2+5,此公式取到的值近似等于sp -->
+    <dimen name="T7">7sp</dimen>
+    <dimen name="pt10">10sp</dimen>
+    <dimen name="pt12">12sp</dimen>
+    <dimen name="pt15">15sp</dimen>
+    <dimen name="pt17">17sp</dimen>
+    <dimen name="pt23">23sp</dimen>
+    <!--title-->
+    <dimen name="T0">20sp</dimen>
+    <dimen name="T6">24sp</dimen>
+    <dimen name="T5">13sp</dimen>
+    <dimen name="T8">18sp</dimen>
+
+</resources>

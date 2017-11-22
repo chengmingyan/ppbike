@@ -1,0 +1,330 @@
+package com.ppbike.activity;
+
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.TextView;
+
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationListener;
+import com.andreabaccega.widget.FormEditText;
+import com.ppbike.R;
+import com.ppbike.bean.PoiAddressBean;
+import com.ppbike.bean.UploadBikeRequest;
+import com.ppbike.bean.UploadBikeResult;
+import com.ppbike.listener.GlideImageLoader;
+import com.ppbike.listener.GlidePauseOnScrollListener;
+import com.ppbike.model.RequestModel;
+import com.ppbike.model.UserModel;
+import com.ppbike.util.BitmapUtil;
+import com.ppbike.util.DialogUtil;
+import com.ppbike.util.GPSUtil;
+import com.ppbike.util.ZipUtil;
+import com.ppbike.view.BottomDialog.BottomDialog;
+import com.ppbike.view.BottomDialog.OnDialogItemClickListener;
+import com.ppbike.view.LoadingDialog;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.finalteam.galleryfinal.CoreConfig;
+import cn.finalteam.galleryfinal.FunctionConfig;
+import cn.finalteam.galleryfinal.GalleryFinal;
+import cn.finalteam.galleryfinal.PauseOnScrollListener;
+import cn.master.util.utils.RequestCodeUtil;
+import cn.master.util.utils.ToastUtil;
+import cn.master.volley.commons.JacksonJsonUtil;
+import cn.master.volley.models.response.handler.ResponseHandler;
+import cn.master.volley.models.response.listener.OnNeedLoginListener;
+
+/**
+ * Created by chengmingyan on 16/6/17.
+ */
+public class UploadBikeActivity extends ParentActivity implements OnNeedLoginListener{
+
+    public static final String INTENT_TITLE = "title";
+    private FormEditText edit_name,edit_nprice,edit_deposit,edit_count,edit_color,edit_pprice,edit_brand;
+    private TextView edit_speed,
+    edit_degree;
+    private TextView tv_pname;
+    private ResponseHandler uploadHandler;
+    private Dialog loadingDialog;
+    private ArrayList<String> mCurPhotoList = new ArrayList<>();
+    private static final int MAX_UPLOAD_COUNT = 1;
+    private UploadBikeRequest request = new UploadBikeRequest();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_upload_bike);
+        initView();
+        uploadHandler = new ResponseHandler();
+        uploadHandler.setOnNeedLoginListener(this);
+        uploadHandler.setOnFailedListener(this);
+        uploadHandler.setOnSucceedListener(this);
+        loadingDialog = new LoadingDialog(this);
+        location();
+    }
+
+    private void initView() {
+        findViewById(R.id.icon_back).setOnClickListener(this);
+        TextView tv_title = (TextView) findViewById(R.id.tv_title);
+        tv_title.setText("我要出租");
+        String title = getIntent().getStringExtra(INTENT_TITLE);
+        if (!TextUtils.isEmpty(title)){
+            tv_title.setText(title);
+        }
+        edit_name = (FormEditText) findViewById(R.id.edit_name);
+        edit_nprice = (FormEditText) findViewById(R.id.edit_nprice);
+        edit_deposit = (FormEditText) findViewById(R.id.edit_deposit);
+        edit_pprice = (FormEditText) findViewById(R.id.edit_pprice);
+        edit_speed = (TextView) findViewById(R.id.edit_speed);
+        edit_count = (FormEditText) findViewById(R.id.edit_count);
+        tv_pname = (TextView) findViewById(R.id.tv_pname);
+        edit_color = (FormEditText) findViewById(R.id.edit_color);
+        edit_degree = (TextView) findViewById(R.id.edit_degree);
+        edit_brand = (FormEditText) findViewById(R.id.edit_brand);
+
+    }
+
+    private void location(){
+        AMapLocation location = GPSUtil.getInstance(this).getaMapLocation();
+        if (location != null){
+            tv_pname.setText(location.getAddress()+"(当前地址)");
+        }else{
+            loadingDialog.show();
+            GPSUtil.getInstance(this).startLocation(new AMapLocationListener() {
+                @Override
+                public void onLocationChanged(AMapLocation aMapLocation) {
+                    if (loadingDialog.isShowing())
+                        loadingDialog.dismiss();
+                    GPSUtil.getInstance(UploadBikeActivity.this).stopLocation();
+                    if (aMapLocation == null || aMapLocation.getErrorCode() != AMapLocation.LOCATION_SUCCESS){
+                        tv_pname.setText("定位失败");
+                    }else{
+                        tv_pname.setText(aMapLocation.getAddress()+"(当前地址)");
+                    }
+                }
+            });
+        }
+
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.icon_back:
+                finish();
+                break;
+            case R.id.layou_addPhoto:
+                ArrayList<String> photos = new ArrayList<>();
+                photos.add("相机");
+                photos.add("相册");
+                BottomDialog.showBottomDialog(this, photos, new OnDialogItemClickListener() {
+                    @Override
+                    public void onDialogItemClick(int position, View buttonView, Dialog dialog) {
+                        switch (position){
+                            case 0:
+                                GalleryFinal.openCamera(REQUEST_CODE_CAMERA, initFinal(), mOnHanlderResultCallback);
+                                break;
+                            case 1:
+                                GalleryFinal.openGallerySingle(REQUEST_CODE_GALLERY,initFinal(),mOnHanlderResultCallback);
+                                break;
+                        }
+                    }
+                });
+                break;
+            case R.id.layout_pname:
+            {
+                AMapLocation location = GPSUtil.getInstance(this).getaMapLocation();
+                if (location != null){
+
+                    PoiAddressBean bean = new  PoiAddressBean();
+                    bean.setLa(location.getLatitude());
+                    bean.setLo(location.getLongitude());
+                    bean.setPoiAddress(location.getStreetNum()+location.getStreetNum());
+                    bean.setAddress(location.getAddress());
+                    bean.setCity(location.getCity());
+                    bean.setDistance((int)location.getAccuracy());
+                    Intent intent = new Intent(this,BikeAddressActivity.class);
+                    intent.putExtra(BikeAddressActivity.INTENT_BEAN,bean);
+                    startActivityForResult(intent, RequestCodeUtil.getInstance().obtainRequestCode(BikeAddressActivity.class));
+                }else{
+                    location();
+                }
+            }
+                break;
+
+            case R.id.layout_speed:
+            {
+                final ArrayList<String> list = new ArrayList<>();
+                list.add("27速");
+                list.add("24速");
+                list.add("21速");
+                BottomDialog.showBottomDialog(this, list, new OnDialogItemClickListener() {
+                    @Override
+                    public void onDialogItemClick(int position, View buttonView, Dialog dialog) {
+                        edit_speed.setText(list.get(position));
+                    }
+                });
+            }
+                break;
+
+            case R.id.layout_degree:
+            {
+                final ArrayList<String> list = new ArrayList<>();
+                list.add("10");
+                list.add("9");
+                list.add("8");
+                list.add("6");
+                BottomDialog.showBottomDialog(this, list, new OnDialogItemClickListener() {
+                    @Override
+                    public void onDialogItemClick(int position, View buttonView, Dialog dialog) {
+                        edit_degree.setText(list.get(position));
+                    }
+                });
+            }
+                break;
+            case R.id.btn_submit: {
+                if (TextUtils.isEmpty(request.getPic())){
+                    ToastUtil.show(this,"请上传一张照片");
+                }
+                if (!edit_name.testValidity() || !edit_nprice.testValidity() || !edit_pprice.testValidity() || !edit_deposit.testValidity() || !edit_count.testValidity()){
+                    return;
+                }
+
+                AMapLocation location = GPSUtil.getInstance(this).getaMapLocation();
+                if (location == null){
+                    ToastUtil.show(this,"未获取到位置信息，请重新定位");
+                    return;
+                }
+                request.setLo(location.getLongitude());
+                request.setLa(location.getLatitude());
+                request.setPname(location.getAddress());
+
+                if (!edit_color.testValidity())
+                    return;
+                String values = edit_color.getText().toString().trim();
+                request.setColor(values);
+                values = edit_speed.getText().toString().trim();
+                if (TextUtils.isEmpty(values)){
+                    ToastUtil.show(this,"请选择速别");
+                    return;
+                }
+                request.setSpeed(values);
+                if (!edit_brand.testValidity())
+                    return;
+                values = edit_brand.getText().toString().trim();
+                request.setBrand(values);
+                values = edit_degree.getText().toString().trim();
+                if (TextUtils.isEmpty(values)){
+                    ToastUtil.show(this,"请选择新旧程度");
+                    return;
+                }
+                request.setDegree(Integer.parseInt(values));
+
+                String token = UserModel.getInstance(this).getUserBean().getToken();
+                if (TextUtils.isEmpty(token)){
+                    DialogUtil.showLoginDialog(this,"您需要登录后才能上传信息",false);
+                    return;
+                }
+                loadingDialog.show();
+                request.setName(edit_name.getText().toString().trim());
+                request.setNprice(Integer.parseInt(edit_nprice.getText().toString().trim())*100);
+                request.setDeposit(Integer.parseInt(edit_deposit.getText().toString().trim()));
+                request.setPprice(Integer.parseInt(edit_pprice.getText().toString().trim())*100);
+                request.setSize(edit_speed.getText().toString().trim());
+                request.setCount(Integer.parseInt(edit_count.getText().toString().trim()));
+                try {
+                    String body = JacksonJsonUtil.toJson(request);
+                    RequestModel.uploadBike(uploadHandler,body,token);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            break;
+        }
+    }
+
+    private final int REQUEST_CODE_CAMERA = 1000;
+    private final int REQUEST_CODE_GALLERY = 1001;
+
+    private FunctionConfig initFinal() {
+        //公共配置都可以在application中配置，这里只是为了代码演示而写在此处
+        FunctionConfig.Builder functionConfigBuilder = new FunctionConfig.Builder();
+        cn.finalteam.galleryfinal.ImageLoader imageLoader = new GlideImageLoader();
+        PauseOnScrollListener pauseOnScrollListener = new GlidePauseOnScrollListener(false, true);
+        functionConfigBuilder.setMutiSelectMaxSize(MAX_UPLOAD_COUNT);
+        functionConfigBuilder.setEnablePreview(false);
+
+        functionConfigBuilder.setSelected(mCurPhotoList);//添加过滤集合
+        final FunctionConfig functionConfig = functionConfigBuilder.build();
+
+        CoreConfig coreConfig = new CoreConfig.Builder(this, imageLoader)
+                .setFunctionConfig(functionConfig)
+                .setPauseOnScrollListener(pauseOnScrollListener)
+                .setNoAnimcation(true)
+                .build();
+        GalleryFinal.init(coreConfig);
+        return functionConfig;
+    }
+
+    private GalleryFinal.OnHanlderResultCallback mOnHanlderResultCallback = new GalleryFinal.OnHanlderResultCallback() {
+        @Override
+        public void onHanlderSuccess(int reqeustCode, List<String> resultList) {
+            if (resultList != null) {
+                mCurPhotoList.clear();
+                mCurPhotoList.addAll(resultList);
+                Bitmap bitmap = BitmapUtil.zoomBitmapByWidthAndHeight(resultList.get(0),720,720);
+                findViewById(R.id.layou_addPhoto).setBackgroundDrawable(new BitmapDrawable(getResources(),bitmap));
+                String bitmapString = ZipUtil.bitmapZipAndEncode(bitmap);
+                request.setPic(bitmapString);
+            }
+        }
+
+        @Override
+        public void onHanlderFailure(int requestCode, String errorMsg) {
+            ToastUtil.show(UploadBikeActivity.this, errorMsg);
+        }
+    };
+
+    @Override
+    public void onFailed(String tag, int resultCode, Object data) {
+        if (loadingDialog.isShowing())
+            loadingDialog.dismiss();
+        ToastUtil.show(this,(String)data);
+    }
+
+    @Override
+    public void onSucceed(String tag, boolean isCache, Object data) {
+        if (loadingDialog.isShowing())
+            loadingDialog.dismiss();
+        UploadBikeResult result = (UploadBikeResult) data;
+        Intent intent = new Intent(this, UploadResultActivity.class);
+        intent.putExtra(UploadResultActivity.INTENT_BIKEID,result.getBikeId());
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void onNeedLogin(String tag) {
+        if (loadingDialog.isShowing())
+            loadingDialog.dismiss();
+        DialogUtil.resetLoginDialog(this,false);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RequestCodeUtil.getInstance().obtainRequestCode(BikeAddressActivity.class)){
+            if (RESULT_OK == resultCode){
+                PoiAddressBean bean = (PoiAddressBean) data.getSerializableExtra(BikeAddressActivity.INTENT_BEAN);
+                tv_pname.setText(bean.getAddress());
+            }
+        }
+    }
+}

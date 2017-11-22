@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_layout"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/layout_startTime"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="取车时间"
+            android:textColor="@color/text_version"
+            android:textSize="@dimen/pt12" />
+
+        <TextView
+            android:id="@+id/tv_startDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="06-01"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt23" />
+
+        <TextView
+            android:id="@+id/tv_startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="周三10:00"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt12" />
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_time_left"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="&#xe602;"
+            android:textColor="@color/text_hit"
+            android:textSize="@dimen/pt15" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/icon" />
+
+    <LinearLayout
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/bg_time_round"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dateNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt23" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="天"
+            android:textColor="@color/text_version"
+            android:textSize="@dimen/pt12" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="2dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/icon" />
+
+    <LinearLayout
+        android:id="@+id/layout_endTime"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="还车时间"
+            android:textColor="@color/text_version"
+            android:textSize="@dimen/pt12" />
+
+        <TextView
+            android:id="@+id/tv_endDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="06-03"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt23" />
+
+        <TextView
+            android:id="@+id/tv_endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="周五10:00"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt12" />
+
+        <com.ppbike.view.IconView
+            android:id="@+id/icon_time_right"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="&#xe602;"
+            android:textColor="@color/text_hit"
+            android:textSize="@dimen/pt15" />
+    </LinearLayout>
+</LinearLayout>

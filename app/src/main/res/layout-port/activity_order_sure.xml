@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activity"
+    android:orientation="vertical">
+
+    <include layout="@layout/inclule_title" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="@color/background_layout"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:padding="10dp"
+        android:text="租客"
+        android:textColor="@color/text_hit"
+        android:textSize="@dimen/pt15" />
+
+    <include
+        layout="@layout/inclule_rent_orderlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp" />
+
+    <include layout="@layout/inclule_order_time" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/background_layout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="租用数量"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt15" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="(库存20辆)"
+            android:textColor="@color/text_version"
+            android:textSize="@dimen/pt15" />
+
+        <include
+            layout="@layout/include_number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/background_layout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="合计"
+            android:textColor="@color/text_version"
+            android:textSize="@dimen/pt10" />
+
+        <TextView
+            android:id="@+id/tv_totalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="￥80.00"
+            android:textColor="@color/text_tips"
+            android:textSize="@dimen/pt17" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/background_layout">
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt17" />
+    </LinearLayout>
+
+</LinearLayout>

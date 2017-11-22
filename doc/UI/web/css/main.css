@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors allanlei (allanleihb@gmail.com)
+ * @date    2016-07-26 09:31:02
+ * @version $Id$
+ */
+*{padding: 0;margin: 0}
+body{font-size: 14px;}
+ul{list-style:none;}
+a{text-decoration: none;color: #37B5C2;}
+a:hover{text-decoration: underline;}
+.topbox,.centerbox,.bottombox{width: 100%;min-width: 1200px;}
+.topbox{height: 540px;background: url(../img/bg.png) center center;}
+.header,.pro,.content{width: 1200px; margin: 0 auto;overflow: hidden;}
+.logobox{padding: 30px;overflow: hidden;}
+.logo{background: url(../img/logo.png) no-repeat center center #000; width: 50px; height: 50px; border-radius: 16px;float: left;margin-right: 10px;}
+.logotext{float: left;color: #fff;}
+.logotext h1{padding: 3px 0;font-size: 1.8em;}
+.logotext span{font-size: 0.85em;}
+.menu{display: none;}
+.propic{float: left; margin: 30px; margin-top: 0;}
+.propic img{border: 10px solid #fff; width: 510px; height: 330px;/*border-color: rgba(255,255,255,0.7);*/}
+.protext{float: right; width: 580px;color: #fff; margin-bottom: 30px; padding-right: 30px}
+.protext p{line-height: 1.4em;}
+.protext h1{font-size: 1.8em;}
+.code{ float: left; background-color: #fff; margin-left: 50px;}
+.code img{width: 180px; height: auto;}
+.downbtn{float: left; width: 250px; margin-left: 50px; font-size: 1.4em;}
+.downbtn li{margin-top: 17px;}
+.downbtn li a{ padding-left:30px;display: block; width: 190px;height: 60px; border: 2px solid #fff; text-align: center; line-height: 60px; color: #fff;border-radius: 6px;}
+.downbtn li a:hover{background-color:#37B5C2; border: 2px solid #37B5C2;text-decoration: none;}
+.iOS a{background: url(../img/ios.png) 16px center no-repeat;}
+.Android a{background: url(../img/android.png) 16px center no-repeat;}
+.centerbox{background-color: #353537; color: #E7E7E7;}
+.content{padding:50px 30px 30px 30px;}
+.content li{width: 25%;float: left; text-align: center;}
+.content em{font-style: normal; font-size: 1.2em; padding-top:20px;display: block;color: #F57052;}
+.content p{text-align: left;padding: 20px 50px;line-height: 1.4em}
+.bottombox{background-color: #2C2C2E; color: #E7E7E7;}
+.footer{height: 40px;line-height: 40px;text-align: center; font-size: 0.85em;}

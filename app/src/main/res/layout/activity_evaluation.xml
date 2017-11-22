@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_activity"
+    android:orientation="vertical">
+
+    <include layout="@layout/inclule_title" />
+
+    <TextView
+        android:id="@+id/tv_priceTip"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="您的押金（20.00）已返还"
+        android:background="@color/text_tips"
+        android:textColor="@color/text_menu"
+        android:textSize="@dimen/pt15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/background_layout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="单车描述："
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt15" />
+
+        <RatingBar
+            android:id="@+id/ratingBar_bike"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:numStars="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/background_layout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="车主服务："
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt15" />
+
+        <RatingBar
+            android:id="@+id/ratingBar_custom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:numStars="3" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_layout"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="评价"
+        android:textColor="@color/text_hit"
+        android:textSize="@dimen/pt12" />
+
+    <com.andreabaccega.widget.FormEditText
+        android:id="@+id/edit_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:background="@color/background_layout"
+        android:gravity="left"
+        android:hint="在此输入您的宝贵评价。"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:maxLength="300"
+        android:padding="10dp"
+        android:textColor="@color/text_menu"
+        android:textColorHint="@color/text_version"
+        android:textSize="@dimen/pt15"
+        app:emptyErrorString="评价不能为空"
+        app:testErrorString="输入的内容有错"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@color/background_title"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:text="评价完了"
+            android:textColor="@color/text_menu"
+            android:textSize="@dimen/pt17" />
+    </LinearLayout>
+</LinearLayout>

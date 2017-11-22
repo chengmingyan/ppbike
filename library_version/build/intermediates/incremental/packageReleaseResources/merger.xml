@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res"/><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/build/generated/res/rs/release"/><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/build/generated/res/resValues/release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/release/res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res"><file name="line" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/line.xml" qualifiers="" type="drawable"/><file name="line_dark" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/line_dark.xml" qualifiers="" type="drawable"/><file name="line_darklight" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/line_darklight.xml" qualifiers="" type="drawable"/><file name="shape_oval_force" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/shape_oval_force.xml" qualifiers="" type="drawable"/><file name="shape_oval_version" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/shape_oval_version.xml" qualifiers="" type="drawable"/><file name="shape_rect_btn_off" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/shape_rect_btn_off.xml" qualifiers="" type="drawable"/><file name="shape_rect_btn_orage" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/shape_rect_btn_orage.xml" qualifiers="" type="drawable"/><file name="shape_rect_btn_white" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable/shape_rect_btn_white.xml" qualifiers="" type="drawable"/><file name="ic_launcher" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable-hdpi/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="none" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable-hdpi/none.png" qualifiers="hdpi-v4" type="drawable"/><file name="version_dialog_head_bk" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable-hdpi/version_dialog_head_bk.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable-mdpi/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="dialog_force" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/layout/dialog_force.xml" qualifiers="" type="layout"/><file name="dialog_install" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/layout/dialog_install.xml" qualifiers="" type="layout"/><file name="dialog_version" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/layout/dialog_version.xml" qualifiers="" type="layout"/><file name="dialog_wifi" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/layout/dialog_wifi.xml" qualifiers="" type="layout"/><file name="layout_notifycation" path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/layout/layout_notifycation.xml" qualifiers="" type="layout"/><file path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/values/colors.xml" qualifiers=""><color name="menu_bg">#FFFFFB</color><color name="darkcyan">#008b8b</color><color name="olivedrab">#6b8e23</color><color name="cc_text_light">#ffcccccc</color><color name="darkmagenta">#8b008b</color><color name="cc_line_dark">#33000000</color><color name="darkgreen">#006400</color><color name="seagreen">#2e8b57</color><color name="peru">#cd853f</color><color name="slategrey">#708090</color><color name="beige">#f5f5dc</color><color name="lavenderblush">#fff0f5</color><color name="chocolate">#d2691e</color><color name="ghostwhite">#f8f8ff</color><color name="purple">#800080</color><color name="burlywood">#deb887</color><color name="grey">#808080</color><color name="lightgray">#d3d3d3</color><color name="mediumvioletred">#c71585</color><color name="darkgrey">#a9a9a9</color><color name="darkkhaki">#bdb76b</color><color name="rosybrown">#bc8f8f</color><color name="cc_shadow_light">#11ffffff</color><color name="dodgerblue">#1e90ff</color><color name="cc_orage_start">#fff08519</color><color name="peachpuff">#ffdab9</color><color name="lightblue">#add8e6</color><color name="black">#000000</color><color name="none">#00000000</color><color name="cc_orage_head">#fff08519</color><color name="gainsboro">#dcdcdc</color><color name="saddlebrown">#8b4513</color><color name="cc_white">#ffeeeeee</color><color name="text">#1C1C1C</color><color name="cadetblue">#5f9ea0</color><color name="tomato">#ff6347</color><color name="aquamarine">#7fffd4</color><color name="indianred">#cd5c5c</color><color name="cc_dark">#ff555555</color><color name="forestgreen">#228b22</color><color name="seaShell">#fff5ee</color><color name="wheat">#f5deb3</color><color name="cornflowerblue">#6495ed</color><color name="darksalmon">#e9967a</color><color name="mediumorchid">#ba55d3</color><color name="cyan">#00ffff</color><color name="ivory">#fffff0</color><color name="cornsilk">#fff8dc</color><color name="aliceblue">#f0f8ff</color><color name="limegreen">#32cd32</color><color name="cc_add_dark">#44000000</color><color name="darkgoldenrod">#b8860b</color><color name="cc_orage_enable">#ffcfcfcf</color><color name="springgreen">#00ff7f</color><color name="cc_line_darklight">#22000000</color><color name="snow">#fffafa</color><color name="whitesmoke">#f5f5f5</color><color name="pink">#ffc0cb</color><color name="cc_btn_off">#ffdedede</color><color name="cc_orage_light">#fff09d48</color><color name="firebrick">#b22222</color><color name="lightseagreen">#20b2aa</color><color name="cc_lay_pressed_light">#44ffffff</color><color name="coral">#ff7f50</color><color name="background_window">#FF3F9FE0</color><color name="cc_orage">#fff08519</color><color name="cc_orage_red">#fff86851</color><color name="lawngreen">#7cfc00</color><color name="sandybrown">#f4a460</color><color name="moccasin">#ffe4b5</color><color name="lavender">#e6e6fa</color><color name="cc_red">#fff03619</color><color name="magenta">#ff00ff</color><color name="cc_orage_end">#fff06f19</color><color name="darkgray">#a9a9a9</color><color name="palegoldenrod">#eee8aa</color><color name="greenyellow">#adff2f</color><color name="darkturquoise">#00ced1</color><color name="navy">#000080</color><color name="cc_text_logolight">#ff999999</color><color name="darkviolet">#9400d3</color><color name="cc_hintlight">#ffdddddd</color><color name="mistyrose">#ffe4e1</color><color name="lightgreen">#90ee90</color><color name="navajowhite">#ffdead</color><color name="yellow">#ffff00</color><color name="cc_orage_dark">#ffde7b17</color><color name="tan">#d2b48c</color><color name="fuchsia">#ff00ff</color><color name="paleturquoise">#afeeee</color><color name="azure">#f0ffff</color><color name="plum">#dda0dd</color><color name="darkseagreen">#8fbc8f</color><color name="mediumblue">#0000cd</color><color name="cc_bk">#fff0f0f0</color><color name="cc_line">#11000000</color><color name="olive">#808000</color><color name="skyblue">#87ceeb</color><color name="lightsalmon">#ffa07a</color><color name="cc_shadow_dark">#05000000</color><color name="lightcyan">#e0ffff</color><color name="maroon">#800000</color><color name="mediumspringgreen">#00fa9a</color><color name="royalblue">#4169e1</color><color name="cc_orage_bk">#fff07019</color><color name="mintcream">#f5fffa</color><color name="cc_blue">#ff006699</color><color name="floralwhite">#fffaf0</color><color name="dimgray">#696969</color><color name="orchid">#da70d6</color><color name="bisque">#ffe4c4</color><color name="goldenrod">#daa520</color><color name="palegreen">#98fb98</color><color name="mediumturquoise">#48d1cc</color><color name="green">#008000</color><color name="darkslategray">#2f4f4f</color><color name="guide">#AA86C166</color><color name="lime">#00ff00</color><color name="darkslateblue">#483d8b</color><color name="oldlace">#fdf5e6</color><color name="cc_stroke">#ffe4e4e4</color><color name="darkblue">#00008b</color><color name="white">#FFFFFFFF</color><color name="palevioletred">#db7093</color><color name="cc_text_dark">#ff7c7c7c</color><color name="steelblue">#4682b4</color><color name="handle">#86C166</color><color name="lightslategrey">#778899</color><color name="midnightblue">#191970</color><color name="salmon">#fa8072</color><color name="cc_text_darklight">#ff9a9a9a</color><color name="cc_string">#ffb8a087</color><color name="crimson">#dc143c</color><color name="darkorange">#ff8c00</color><color name="cc_hint">#ffcccccc</color><color name="darkolivegreen">#556b2f</color><color name="darkred">#8b0000</color><color name="overlay">#AA1C1C1C</color><color name="lightpink">#ffb6c1</color><color name="mediumaquamarine">#66cdaa</color><color name="cc_lay_selected">#11000000</color><color name="mediumpurple">#9370db</color><color name="thistle">#d8bfd8</color><color name="silver">#c0c0c0</color><color name="slategray">#708090</color><color name="lightgoldenrodyellow">#fafad2</color><color name="powderblue">#b0e0e6</color><color name="indigo">#4b0082</color><color name="lightsteelblue">#b0c4de</color><color name="slateblue">#6a5acd</color><color name="cc_lay_pressed_untran">#fff9f9f9</color><color name="lightyellow">#ffffe0</color><color name="blueviolet">#8a2be2</color><color name="orangered">#ff4500</color><color name="cc_card_hot">#44000000</color><color name="brown">#a52a2a</color><color name="frame">#86C166</color><color name="honeydew">#f0fff0</color><color name="dimgrey">#696969</color><color name="cc_green">#ff12b143</color><color name="antiquewhite">#faebd7</color><color name="deepskyblue">#00bfff</color><color name="cc_blue_hot">#ff00557f</color><color name="teal">#008080</color><color name="blue">#0000ff</color><color name="orange">#ffa500</color><color name="gold">#ffd700</color><color name="darkslategrey">#2f4f4f</color><color name="gray">#808080</color><color name="mediumslateblue">#7b68ee</color><color name="cc_dot_orage">#fff08519</color><color name="lightgrey">#d3d3d3</color><color name="darkorchid">#9932cc</color><color name="cc_text_blank">#ff4b4b4b</color><color name="hotpink">#ff69b4</color><color name="lightcoral">#f08080</color><color name="violet">#ee82ee</color><color name="base">#FFFFFB</color><color name="khaki">#f0e68c</color><color name="cc_white_head">#fff0f0f0</color><color name="papayawhip">#ffefd5</color><color name="cc_bluelight">#ff3dc3ff</color><color name="cc_lay_pressed">#07000000</color><color name="lightskyblue">#87cefa</color><color name="aqua">#00ffff</color><color name="lightslategray">#778899</color><color name="sienna">#a0522d</color><color name="red">#ff0000</color><color name="blanchedalmond">#ffebcd</color><color name="linen">#faf0e6</color><color name="cc_cofee">#ff9c7145</color><color name="cc_light">#10000000</color><color name="deeppink">#ff1493</color><color name="turquoise">#40e0d0</color><color name="mediumseagreen">#3cb371</color><color name="lemonchiffon">#fffacd</color><color name="chartreuse">#7fff00</color><color name="cc_dot_dark">#ffdcd3cb</color><color name="cc_orage_hint">#22f08519</color><color name="cc_lay_nomal">#ffffffff</color></file><file path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/values/dimens.xml" qualifiers=""><dimen name="text_subig">17sp</dimen><dimen name="text_tiny">12sp</dimen><dimen name="text_nomal">15sp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="text_big">16sp</dimen><dimen name="text_small">14sp</dimen><dimen name="text_title">20sp</dimen><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="text_mintitle">19sp</dimen><dimen name="nomal_corners">5dp</dimen></file><file path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/main/res/values/styles.xml" qualifiers=""><style name="text_big_cofee">
+        <item name="android:textColor">@color/cc_cofee</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style><style name="text_small_blank">
+        <item name="android:textColor">@color/cc_text_blank</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style><style name="text_nomal_darklight">
+        <item name="android:textColor">@color/cc_text_darklight</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_nomal_light">
+        <item name="android:textColor">@color/cc_text_light</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_tiny_light">
+        <item name="android:textColor">@color/cc_text_light</item>
+        <item name="android:textSize">@dimen/text_tiny</item>
+    </style><style name="text_nomal_blank">
+        <item name="android:textColor">@color/cc_text_blank</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_big_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style><style name="text_nomal_logolight">
+        <item name="android:textColor">@color/cc_text_logolight</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_nomal_orage">
+        <item name="android:textColor">@color/cc_orage</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_small_dark">
+        <item name="android:textColor">@color/cc_text_dark</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style><style name="text_title_blank">
+        <item name="android:textColor">@color/cc_text_blank</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style><style name="text_title_darklight">
+        <item name="android:textColor">@color/cc_text_darklight</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style><style name="text_big_green">
+        <item name="android:textColor">@color/cc_green</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style><style name="text_nomal_orage_red">
+        <item name="android:textColor">@color/cc_orage_red</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_title_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style><style name="VersionDialog" parent="@style/MyDialog">
+    </style><style name="text_small_light">
+        <item name="android:textColor">@color/cc_text_light</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style><style name="text_title_dark">
+        <item name="android:textColor">@color/cc_text_dark</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style><style name="text_subig_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_subig</item>
+    </style><style name="text_nomal_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_subig_dark">
+        <item name="android:textColor">@color/cc_text_dark</item>
+        <item name="android:textSize">@dimen/text_subig</item>
+    </style><style name="text_big_orage">
+        <item name="android:textColor">@color/cc_orage</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style><style name="MyDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/none</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style><style name="text_small_darklight">
+        <item name="android:textColor">@color/cc_text_darklight</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style><style name="text_nomal_green">
+        <item name="android:textColor">@color/cc_green</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_title_logolight">
+        <item name="android:textColor">@color/cc_text_logolight</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style><style name="text_nomal_dark">
+        <item name="android:textColor">@color/cc_text_dark</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="text_big_dark">
+        <item name="android:textColor">@color/cc_text_dark</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style><style name="text_mintitle_green">
+        <item name="android:textColor">@color/cc_green</item>
+        <item name="android:textSize">@dimen/text_mintitle</item>
+    </style><style name="text_mintitle_dark">
+        <item name="android:textColor">@color/cc_text_dark</item>
+        <item name="android:textSize">@dimen/text_mintitle</item>
+    </style><style name="text_subig_orage">
+        <item name="android:textColor">@color/cc_orage</item>
+        <item name="android:textSize">@dimen/text_subig</item>
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="text_big_blank">
+        <item name="android:textColor">@color/cc_text_blank</item>
+        <item name="android:textSize">@dimen/text_big</item>
+    </style><style name="text_small_orage">
+        <item name="android:textColor">@color/cc_orage</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style><style name="text_tiny_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_tiny</item>
+    </style><style name="text_title_light">
+        <item name="android:textColor">@color/cc_text_light</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style><style name="text_nomal_bluelight">
+        <item name="android:textColor">@color/cc_bluelight</item>
+        <item name="android:textSize">@dimen/text_nomal</item>
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style></file></source><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/build/generated/res/rs/release"/><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/build/generated/res/resValues/release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="/Users/chengmingyan/Development/svn/truck/ppbike/library_version/src/release/res"/></dataSet><mergedItems/></merger>

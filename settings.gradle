@@ -1,0 +1,3 @@
+include ':app', ':Util', ':ShapeImageView', ':volley', ':VolleyUtil', ':EditText', ':ViewPagerIndicator', ':galleryfinal', ':onekeyshare', ':TimePickerDialog'
+include ':SlidingMenu'
+include ':library_version'
